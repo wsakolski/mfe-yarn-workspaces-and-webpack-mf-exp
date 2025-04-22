@@ -20,6 +20,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      shared: path.resolve(__dirname, "../shared/src"),
+    },
   },
   module: {
     rules: [
@@ -40,6 +43,7 @@ module.exports = {
       shared: {
         react: { singleton: true, requiredVersion: "^18.0.0" },
         "react-dom": { singleton: true, requiredVersion: "^18.0.0" },
+        "shared": { singleton: true },
       },
     }),
     new HtmlWebpackPlugin({
