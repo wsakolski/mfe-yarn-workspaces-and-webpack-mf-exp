@@ -1,0 +1,16 @@
+{
+  "name": "microfrontend-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:all": "concurrently \"yarn workspace mfe1 start\" \"yarn workspace mfe2 start\" \"yarn workspace host start\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
